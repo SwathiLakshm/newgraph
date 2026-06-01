@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dijkstra Problem 2</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<h1>Dijkstra Problem 2</h1>
+
+<h2>Problem Statement</h2>
+
+<p>
+A computer network contains 6 routers (A–F) connected by links with non-negative latency values.
+Using Dijkstra's Algorithm determine the minimum-latency route from Router A to all other routers.
+</p>
+
+<h2>Input Graph</h2>
+
+<img src="{{ url_for('static', filename='dijkstra2.png') }}" width="600">
+
+<h2>Algorithm Used</h2>
+
+<p>Dijkstra Algorithm</p>
+
+<h2>Step-by-Step Execution</h2>
+
+<ol>
+<li>Initialize dist[A]=0</li>
+<li>Select A as source</li>
+<li>Visit nearest unvisited node</li>
+<li>Update neighboring distances</li>
+<li>Repeat until all routers are visited</li>
+</ol>
+
+<h2>Distance Table</h2>
+
+<table>
+
+<tr>
+<th>Router</th>
+<th>Distance (ms)</th>
+</tr>
+
+<tr><td>A</td><td>0</td></tr>
+<tr><td>B</td><td>7</td></tr>
+<tr><td>C</td><td>9</td></tr>
+<tr><td>D</td><td>20</td></tr>
+<tr><td>E</td><td>20</td></tr>
+<tr><td>F</td><td>11</td></tr>
+
+</table>
+
+<h2>Shortest Paths</h2>
+
+<pre>
+A → B : A → B
+
+A → C : A → C
+
+A → D : A → C → D
+
+A → E : A → C → F → E
+
+A → F : A → C → F
+</pre>
+
+<h2>Shortest Path Tree</h2>
+
+<pre>
+A
+├── B
+└── C
+    ├── D
+    └── F
+        └── E
+</pre>
+
+<h2>Execution Time</h2>
+
+<p>0.001 ms</p>
+
+<h2>Complexity</h2>
+
+<p>Time Complexity : O((V+E) log V)</p>
+
+<a href="/">Back to Home</a>
+
+</body>
+</html>

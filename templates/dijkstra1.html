@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dijkstra Problem 1</title>
+<link rel="stylesheet" href="{{ url_for('static',filename='style.css')}}">
+</head>
+
+<body>
+
+<h1>Dijkstra Problem 1</h1>
+
+<h2>Problem Statement</h2>
+
+<p>
+Find shortest path from vertex 0.
+</p>
+
+<h2>Input Graph</h2>
+
+<img src="{{ url_for('static',filename='dijkstra1.png') }}" width="500">
+
+<h2>Algorithm Used</h2>
+
+<p>Dijkstra Algorithm</p>
+
+<h2>Step-by-Step Execution</h2>
+
+<ol>
+<li>Select source 0</li>
+<li>Visit minimum distance vertex</li>
+<li>Update adjacent vertices</li>
+<li>Repeat until all visited</li>
+</ol>
+
+<h2>Final Distance Table</h2>
+
+<table>
+
+<tr>
+<th>Vertex</th>
+<th>Distance</th>
+</tr>
+
+<tr><td>0</td><td>0</td></tr>
+<tr><td>1</td><td>7</td></tr>
+<tr><td>2</td><td>3</td></tr>
+<tr><td>3</td><td>9</td></tr>
+<tr><td>4</td><td>5</td></tr>
+
+</table>
+
+<h2>Shortest Paths</h2>
+
+<pre>
+0 → 2 → 1
+0 → 2
+0 → 2 → 4 → 3
+0 → 2 → 4
+</pre>
+
+<h2>Execution Time</h2>
+
+<p>0.0008 ms</p>
+
+<h2>Complexity</h2>
+
+<p>O((V+E)logV)</p>
+
+<a href="/">Back</a>
+
+</body>
+</html>
